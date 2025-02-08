@@ -129,9 +129,9 @@
                 ? ["Tall and strong 💪", "Blue-eyed with dimples 😊", "Elegant with a beard 🧔", "Casual and stylish 👕", "Sporty and athletic 🏋️"] 
                 : ["Curly hair and bright smile 😊", "Charming with freckles 🌸", "Tall and elegant 👗", "Sporty and energetic 🏃‍♀️", "Fashionable and trendy 👠"];
             
-            document.getElementById("appearance").innerText = appearance[Math.floor(Math.random() * appearance.length)];
-            document.getElementById("character").innerText = traits[Math.floor(Math.random() * traits.length)];
-            document.getElementById("hobbies").innerText = hobbies[Math.floor(Math.random() * hobbies.length)];
+            document.getElementById("appearance").innerText = appearance.sort(() => 0.5 - Math.random()).slice(0, 5).join(", ");
+            document.getElementById("character").innerText = traits.sort(() => 0.5 - Math.random()).slice(0, 5).join(", ");
+            document.getElementById("hobbies").innerText = hobbies.sort(() => 0.5 - Math.random()).slice(0, 5).join(", ");
             document.getElementById("job").innerText = jobs[Math.floor(Math.random() * jobs.length)];
         }
     </script>
