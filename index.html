@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Future Soulmate</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff5733;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            background-color: #337aff;
+            color: white;
+        }
+        .answer-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .column {
+            width: 20%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Created by Panagiotis Domvros 2025 (CC BY-NC)</h2>
+    <p>Click on a button to choose the gender of your future soul mate. Then, explore their characteristics and decide if they are your perfect match!</p>
+    <button onclick="openHelpTab()">❓ Help</button>
+    <h1>💖 Future Soul Mate 💖</h1>
+    <button onclick="generateSoulMate('male')">🚹 Male</button>
+    <button onclick="generateSoulMate('female')">🚺 Female</button>
+    <div class="container">
+        <div class="column">
+            <h3>🌟 External Characteristics</h3>
+            <p id="appearance"></p>
+        </div>
+        <div class="column">
+            <h3>💖 Character Traits</h3>
+            <p id="character"></p>
+        </div>
+        <div class="column">
+            <h3>🎨 Hobbies</h3>
+            <p id="hobbies"></p>
+        </div>
+        <div class="column">
+            <h3>💼 Profession</h3>
+            <p id="job"></p>
+        </div>
+    </div>
+    <br>
+    <a class="answer-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfQJD59oK2T8rE22exkXSwfZoaWZJlnkAr5MHMNoRPz6lQdFw/viewform?usp=dialog" target="_blank">
+        📝 Write About Your Future Soul Mate
+    </a>
+
+    <script>
+        function openHelpTab() {
+            const helpWindow = window.open('', '_blank', 'width=600,height=500');
+            helpWindow.document.write(`
+                <html>
+                <head>
+                    <title>Helpful Words & Phrases</title>
+                    <style>
+                        body { font-family: 'Comic Sans MS', cursive, sans-serif; text-align: center; padding: 20px; }
+                        h2 { color: #ff5733; }
+                        ul { text-align: left; display: inline-block; }
+                    </style>
+                </head>
+                <body>
+                    <h2>Useful Words & Phrases</h2>
+                    <ul>
+                        <li>✅ I think this person is a great match for me because...</li>
+                        <li>❌ I don’t think we would get along because...</li>
+                        <li>🌟 Their personality is interesting because...</li>
+                        <li>💖 I like their hobbies because...</li>
+                        <li>🚀 Their job is amazing because...</li>
+                        <li>🏡 I can imagine living with this person because...</li>
+                        <li>🛑 A big problem with this match is...</li>
+                        <li>🏕️ We would have fun together doing...</li>
+                        <li>🎭 I prefer someone more/less...</li>
+                        <li>📚 We could learn from each other because...</li>
+                    </ul>
+                </body>
+                </html>
+            `);
+        }
+
+        function generateSoulMate(gender) {
+            const traits = ["Kind 😊", "Funny 😂", "Smart 🧠", "Confident 😎", "Adventurous 🌍"];
+            const hobbies = ["Playing music 🎸", "Traveling 🌎", "Gaming 🎮", "Cooking 🍳", "Dancing 💃"];
+            const jobs = ["AI Engineer 🤖", "Space Pilot 🚀", "Chef 👨‍🍳", "Doctor 🏥", "Artist 🎨"];
+            const appearance = gender === 'male' 
+                ? ["Tall and strong 💪", "Blue-eyed with dimples 😊", "Elegant with a beard 🧔", "Casual and stylish 👕", "Sporty and athletic 🏋️"] 
+                : ["Curly hair and bright smile 😊", "Charming with freckles 🌸", "Tall and elegant 👗", "Sporty and energetic 🏃‍♀️", "Fashionable and trendy 👠"];
+            
+            document.getElementById("appearance").innerText = appearance[Math.floor(Math.random() * appearance.length)];
+            document.getElementById("character").innerText = traits[Math.floor(Math.random() * traits.length)];
+            document.getElementById("hobbies").innerText = hobbies[Math.floor(Math.random() * hobbies.length)];
+            document.getElementById("job").innerText = jobs[Math.floor(Math.random() * jobs.length)];
+        }
+    </script>
+</body>
+</html>
