@@ -53,7 +53,7 @@
     <h2>Created by Panagiotis Domvros 2025 (CC BY-NC)</h2>
     <p>Click on a button to choose the gender of your future soul mate. Then, explore their characteristics and decide if they are your perfect match!</p>
     <button onclick="openHelpTab()">❓ Help</button>
-    <h1>💖 Future Soul Mate 💖</h1>
+    <h1>💖 Future Soulmate 💖</h1>
     <button onclick="generateSoulMate('male')">🚹 Male</button>
     <button onclick="generateSoulMate('female')">🚺 Female</button>
     <div class="container">
@@ -76,7 +76,7 @@
     </div>
     <br>
     <a class="answer-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfQJD59oK2T8rE22exkXSwfZoaWZJlnkAr5MHMNoRPz6lQdFw/viewform?usp=dialog" target="_blank">
-        📝 Write About Your Future Soul Mate
+        📝 Write About Your Future Soulmate
     </a>
 
     <script>
@@ -105,6 +105,16 @@
                         <li>🏕️ We would have fun together doing...</li>
                         <li>🎭 I prefer someone more/less...</li>
                         <li>📚 We could learn from each other because...</li>
+                        <li>💬 We would have deep conversations about...</li>
+                        <li>🎮 We share similar hobbies such as...</li>
+                        <li>🎶 We enjoy the same kind of music like...</li>
+                        <li>🏆 They seem very ambitious, which I like because...</li>
+                        <li>💼 Their job is very demanding, and that might be a problem because...</li>
+                        <li>📅 I would go on a date with them because...</li>
+                        <li>💡 We have very different personalities, so it might be difficult because...</li>
+                        <li>💃 We would have fun dancing because...</li>
+                        <li>🌎 We could travel together because...</li>
+                        <li>🏠 This person seems perfect for a family life because...</li>
                     </ul>
                 </body>
                 </html>
@@ -112,9 +122,9 @@
         }
 
         function generateSoulMate(gender) {
-            const traits = ["Kind 😊", "Funny 😂", "Smart 🧠", "Confident 😎", "Adventurous 🌍"];
-            const hobbies = ["Playing music 🎸", "Traveling 🌎", "Gaming 🎮", "Cooking 🍳", "Dancing 💃"];
-            const jobs = ["AI Engineer 🤖", "Space Pilot 🚀", "Chef 👨‍🍳", "Doctor 🏥", "Artist 🎨"];
+            const traits = ["Kind 😊", "Funny 😂", "Smart 🧠", "Confident 😎", "Adventurous 🌍", "Loyal ❤️", "Creative 🎨", "Patient 🕰️", "Energetic ⚡", "Caring 🤗", "Optimistic ☀️", "Independent 🚀", "Gentle 🌿", "Brave 🦸", "Hardworking 💪", "Charming ✨", "Thoughtful 🤔", "Outgoing 🎉", "Easygoing 🌊", "Supportive 🤝"];
+            const hobbies = ["Playing music 🎸", "Traveling 🌎", "Gaming 🎮", "Cooking 🍳", "Dancing 💃", "Reading 📚", "Hiking 🏕️", "Swimming 🏊", "Photography 📷", "Yoga 🧘", "Cycling 🚴", "Painting 🎨", "Running 🏃", "Astronomy 🔭", "Writing ✍️", "Skiing ⛷️", "Skateboarding 🛹", "Martial arts 🥋", "Fishing 🎣", "Gardening 🌿"];
+            const jobs = ["AI Engineer 🤖", "Space Pilot 🚀", "Chef 👨‍🍳", "Doctor 🏥", "Artist 🎨", "Teacher 🍎", "Entrepreneur 💼", "Scientist 🔬", "Athlete 🏆", "Architect 🏗️", "Marine Biologist 🐠", "Robotics Specialist 🤖", "Fashion Designer 👗", "Virtual Reality Developer 🕶️", "Lawyer ⚖️", "Astrobiologist 🛸", "Psychologist 🧠", "Environmental Activist 🌍", "Cybersecurity Expert 🔐", "Music Producer 🎵"];
             const appearance = gender === 'male' 
                 ? ["Tall and strong 💪", "Blue-eyed with dimples 😊", "Elegant with a beard 🧔", "Casual and stylish 👕", "Sporty and athletic 🏋️"] 
                 : ["Curly hair and bright smile 😊", "Charming with freckles 🌸", "Tall and elegant 👗", "Sporty and energetic 🏃‍♀️", "Fashionable and trendy 👠"];
